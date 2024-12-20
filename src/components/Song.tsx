@@ -7,5 +7,7 @@ type SongProps = {
 export const Song = ({song}: SongProps) => {
     return (<>
         <div>{song.name}</div>
+        <div>{song.artist}</div>
+        <div>{song.album ?? "Unknown"}</div>
     </>)
 }
