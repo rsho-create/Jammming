@@ -1,9 +1,10 @@
 import { Button } from "./common/Button"
+import TextInput from "./styled/Input"
 
 export const SearchBar = () => {
     return (
         <>
-        <input type="text" /> <Button callbackAction="Search"  />
+        <TextInput type="text" /> <Button callbackAction="Search"  onClickCallback={() => {}}/>
         </>
     )
 }

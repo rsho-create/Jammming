@@ -1,13 +1,18 @@
 import Track from "../types/Track"
+import FlexColumnContainer from "./styled/FlexColumnContainer";
+import FlexRowContainer from "./styled/FlexRowContainer";
 
 type SongProps = {
     song: Track;
 }
 
-export const Song = ({song}: SongProps) => {
+export const Song = ({ song }: SongProps) => {
     return (<>
-        <div>{song.name}</div>
-        <div>{song.artist}</div>
-        <div>{song.album ?? "Unknown"}</div>
+        <FlexRowContainer className="songBorder">
+            <FlexColumnContainer>{song.name}</FlexColumnContainer>
+            <FlexColumnContainer>{song.artist}</FlexColumnContainer>
+            <FlexColumnContainer>{song.album ?? "Unknown"}</FlexColumnContainer>
+        </FlexRowContainer>
+
     </>)
 }
